@@ -1,0 +1,29 @@
+# Ignore local development files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv
+env/
+venv/
+
+# Ignore cache directories
+image_cache/
+blob/
+Data/
+_next/
+
+# Ignore development files
+.git/
+.gitignore
+*.log
+*.sqlite
+*.db
+
+# Ignore uploaded images and media
+images/
+static/037b440f/
+static/7c93fa6a/
+
+# Keep only essential files for deployment
