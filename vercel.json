@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "./app.py",
+      "src": "./index.py",
       "use": "@vercel/python"
     }
   ],
@@ -16,7 +16,7 @@
     "FLASK_ENV": "production"
   },
   "functions": {
-    "app.py": {
+    "index.py": {
       "maxDuration": 10
     }
   }
