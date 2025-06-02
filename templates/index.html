@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Illuvium Latest</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 50px;
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .logo {
+            font-size: 4em;
+            margin-bottom: 30px;
+        }
+        .description {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        .status {
+            background: rgba(0, 255, 0, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 1px solid rgba(0, 255, 0, 0.3);
+        }
+        .warning {
+            background: rgba(255, 165, 0, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 1px solid rgba(255, 165, 0, 0.3);
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            margin: 10px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">🎮</div>
+        <h1>Illuvium Latest</h1>
+        
+        <div class="status">
+            <h3>✅ Flask Application Running</h3>
+            <p>Your Illuvium Flask application is successfully deployed!</p>
+        </div>
+        
+        <div class="description">
+            <p>This is a Flask web application that serves as a proxy and content handler for Illuvium game assets and pages.</p>
+        </div>
+        
+        <div class="warning">
+            <h3>⚠️ GitHub Pages Limitation</h3>
+            <p>This Flask application cannot run on GitHub Pages as it requires Python server execution. 
+            GitHub Pages only supports static websites.</p>
+        </div>
+        
+        <h3>Recommended Hosting Platforms:</h3>
+        <div style="margin: 20px 0;">
+            <a href="https://railway.app" class="btn" target="_blank">🚂 Railway</a>
+            <a href="https://render.com" class="btn" target="_blank">🎨 Render</a>
+            <a href="https://heroku.com" class="btn" target="_blank">🟣 Heroku</a>
+            <a href="https://vercel.com" class="btn" target="_blank">▲ Vercel</a>
+        </div>
+        
+        <div style="margin-top: 40px;">
+            <a href="/test" class="btn">Test API Endpoint</a>
+            <a href="https://github.com/yakuzamack/illuvium-latest" class="btn" target="_blank">📦 View Code</a>
+        </div>
+        
+        <div style="margin-top: 30px; font-size: 0.9em; opacity: 0.8;">
+            <p>Repository: <a href="https://github.com/yakuzamack/illuvium-latest" style="color: #fff;">github.com/yakuzamack/illuvium-latest</a></p>
+        </div>
+    </div>
+
+    <script>
+        // Test if the Flask app is working
+        fetch('/test')
+            .then(response => response.json())
+            .then(data => {
+                console.log('Flask API test successful:', data);
+            })
+            .catch(error => {
+                console.error('Flask API test failed:', error);
+            });
+    </script>
+</body>
+</html>
