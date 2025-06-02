@@ -1,0 +1,9 @@
+[build]
+builder = "NIXPACKS"
+
+[deploy]
+startCommand = "gunicorn wsgi:app"
+healthcheckPath = "/test"
+
+[env]
+FLASK_ENV = "production"
